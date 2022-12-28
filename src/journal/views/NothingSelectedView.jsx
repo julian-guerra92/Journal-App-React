@@ -1,10 +1,23 @@
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.css';
 import { StarOutline } from '@mui/icons-material';
 import { Grid, Typography } from '@mui/material';
 
 export const NothingSelectedView = () => {
+
+   const { messageSaved } = useSelector(state => state.journal);
+
+   useEffect(() => {
+      if (messageSaved.length > 0) {
+         Swal.fire('Deleted Note', messageSaved, 'warning');
+      }
+   }, [messageSaved])
+
    return (
       <Grid
-         className='animate__animated animate__fadeIn'
+         className='animate__animated animate__fadeIn animate__faster'
          container
          spacing={0}
          direction="column"

@@ -50,7 +50,7 @@ export const RegisterPage = () => {
 
    return (
       <AuthLayout title='Create a Count'>
-         <form onSubmit={onSubmit} className='animate__animated animate__fadeIn'>
+         <form onSubmit={onSubmit} className='animate__animated animate__fadeIn animate__faster'>
             <Grid container>
 
                <Grid item xs={12} sx={{ mt: 2 }}>
