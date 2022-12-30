@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { collection, getDocs } from "firebase/firestore/lite";
 import { FirebaseDB } from "../firebase/config";
 
